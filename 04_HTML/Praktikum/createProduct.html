@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create Product</h1>
+    <h2>Detai Product</h2>
+
+    <form action="">
+        <label for="pname">Product name:</label><br>
+        <input type="text" id="" name="name" value=""><br>
+
+        <br><label for="product-category">Product Category :</label>
+        <br><select id="product-category" name="product-category">
+            <option value=""></option>
+            <option value="category1">Category 1</option>
+            <option value="category2">Category 2</option>
+            <option value="category3">Category 3</option>
+        </select><br>
+
+        <br><label>Product Freshness:</label>
+        <br><input type="radio" id="brand-new" name="product-freshness" value="brand-new" required>
+        <label for="brand-new">Brand New</label><br>
+        <input type="radio" id="second-hand" name="product-freshness" value="second-hand" required>
+        <label for="second-hand">Second Hand</label><br>
+        <input type="radio" id="refurbished" name="product-freshness" value="refurbished" required>
+        <label for="refurbished">Refurbished</label><br>
+
+        <br><label for="product-image">Image of Product:</label>
+        <input type="file" id="product-image" name="product-image" accept="image/*"><br>
+
+        <br><label for="additional-description">Additional Description:</label><br>
+        <textarea id="additional-description" name="additional-description" rows="10" cols="50"></textarea><br>
+
+        <br><label for="product-price">Product price:</label><br>
+        <input type="text" id="product-price" name="product-price" value="Rp."><br>
+
+        <center>
+            <br><input type="submit" value="Submit">
+        </center>
+
+      </form> 
+      
+</body>
+</html>
