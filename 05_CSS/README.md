@@ -1,6 +1,6 @@
 #summary Materi CSS
 
-1. Selectors dan Peranannya
+1.Selectors dan Peranannya
 Dalam CSS, selector digunakan untuk memilih elemen HTML yang ingin diberikan gaya. Ada berbagai jenis selector yang dapat digunakan, di antaranya element selector, class selector, dan ID selector.
 
 a. Element selector secara langsung menerapkan gaya ke semua elemen dari tipe tertentu, seperti "p" atau h1>. Misalnya, jika kita ingin semua   paragraf memiliki warna teks biru, kita dapat menggunakan selector p { color: blue; }.
@@ -9,7 +9,7 @@ b. Class selector memungkinkan kita untuk menerapkan gaya pada elemen tertentu y
 
 c. ID selector digunakan untuk elemen yang memiliki atribut ID unik dan diidentifikasi dengan menggunakan tanda pagar #. Misalnya, #header { background-color: gray; } akan menerapkan gaya hanya pada elemen dengan ID header.
 
-2. Box Model
+2.Box Model
 Setiap elemen HTML dirender menggunakan CSS Box Model, yang mengatur ruang elemen di halaman. Box model terdiri dari empat bagian utama:
 
 a. Content: Ini adalah area di mana teks atau gambar ditempatkan. Ukuran content dapat diatur menggunakan properti seperti width dan height.
@@ -20,7 +20,7 @@ Margin: Area di luar border yang menciptakan jarak antara elemen dengan elemen l
 
 c. Box model ini penting dalam mengatur tata letak halaman dan membuat elemen terlihat lebih teratur dan proporsional. Memahami bagaimana box model bekerja juga membantu dalam memecahkan masalah penempatan elemen.
 
-3. Positioning dan Layout
+3.Positioning dan Layout
 CSS menyediakan berbagai cara untuk mengatur tata letak elemen di halaman menggunakan properti position. Ada beberapa nilai penting dalam properti ini:
 
 a. Static: Ini adalah nilai default, di mana elemen ditempatkan dalam aliran normal dokumen. Tidak ada perubahan posisi yang terjadi dengan nilai ini.
