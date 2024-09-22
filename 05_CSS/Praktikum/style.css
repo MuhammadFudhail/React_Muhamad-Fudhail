@@ -9,8 +9,6 @@ body {
     overflow-x: hidden;
 }
 
-
-
 #header > h1 {
     font-size: 60px; 
     color: #37517E; 
@@ -79,7 +77,6 @@ body {
     cursor: pointer;
     margin-top: 50px;
     transition: background-color 0.8s ease;
-    
 }
 
 #btn-start:hover {
@@ -189,7 +186,6 @@ p {
     font-size: 16px;
 }
 
-
 .footer-column p, .footer-column ul {
     margin: 0;
     padding: 0;
@@ -207,6 +203,7 @@ p {
     text-decoration: none;
     color: #777777;
     font-size: 14px;
+    padding-left: 20px;
 }
 
 .footer-column ul li a:hover {
