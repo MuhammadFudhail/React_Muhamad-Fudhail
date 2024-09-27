@@ -1,31 +1,42 @@
-#summary Materi CSS
+# CSS Concepts
 
-1.Selectors dan Peranannya
-Dalam CSS, selector digunakan untuk memilih elemen HTML yang ingin diberikan gaya. Ada berbagai jenis selector yang dapat digunakan, di antaranya element selector, class selector, dan ID selector.
+## 1. Selector
 
-a. Element selector secara langsung menerapkan gaya ke semua elemen dari tipe tertentu, seperti "p" atau h1>. Misalnya, jika kita ingin semua   paragraf memiliki warna teks biru, kita dapat menggunakan selector p { color: blue; }.
+Selector dalam CSS adalah pola yang digunakan untuk memilih elemen HTML yang ingin diberi gaya. Ada beberapa jenis selector, antara lain:
 
-b. Class selector memungkinkan kita untuk menerapkan gaya pada elemen tertentu yang memiliki atribut class. Ini dilakukan dengan menambahkan titik di depan nama class. Contoh: .content { font-size: 16px; }. Gaya ini akan diterapkan pada semua elemen yang memiliki class content.
+### Type Selector
+Memilih elemen berdasarkan jenis tag, misalnya `p` untuk semua paragraf.
 
-c. ID selector digunakan untuk elemen yang memiliki atribut ID unik dan diidentifikasi dengan menggunakan tanda pagar #. Misalnya, #header { background-color: gray; } akan menerapkan gaya hanya pada elemen dengan ID header.
+### Class Selector
+Memilih elemen dengan atribut class, ditandai dengan titik (.), misalnya `.classname`.
 
-2.Box Model
-Setiap elemen HTML dirender menggunakan CSS Box Model, yang mengatur ruang elemen di halaman. Box model terdiri dari empat bagian utama:
+### ID Selector
+Memilih elemen dengan atribut id, ditandai dengan pagar (#), misalnya `#idname`.
 
-a. Content: Ini adalah area di mana teks atau gambar ditempatkan. Ukuran content dapat diatur menggunakan properti seperti width dan height.
-Padding: Area di sekitar content, yang menciptakan ruang di dalam batas elemen tetapi di luar konten. Padding bisa diatur dengan padding: 10px; untuk membuat jarak di dalam elemen.
+### Attribute Selector
+Memilih elemen berdasarkan atribut tertentu, misalnya `[type="text"]`.
 
-b. Border: Ini adalah garis yang mengelilingi padding dan content, yang dapat diatur dalam ketebalan, gaya, dan warnanya. Contoh: border: 1px solid black;.
-Margin: Area di luar border yang menciptakan jarak antara elemen dengan elemen lain di halaman. Misalnya, margin: 20px; akan menambahkan ruang di luar border elemen.
+---
 
-c. Box model ini penting dalam mengatur tata letak halaman dan membuat elemen terlihat lebih teratur dan proporsional. Memahami bagaimana box model bekerja juga membantu dalam memecahkan masalah penempatan elemen.
+## 2. Box Model
 
-3.Positioning dan Layout
-CSS menyediakan berbagai cara untuk mengatur tata letak elemen di halaman menggunakan properti position. Ada beberapa nilai penting dalam properti ini:
+Box model adalah konsep dalam CSS yang menggambarkan cara elemen ditampilkan di halaman web. Setiap elemen dianggap sebagai kotak yang memiliki beberapa komponen:
 
-a. Static: Ini adalah nilai default, di mana elemen ditempatkan dalam aliran normal dokumen. Tidak ada perubahan posisi yang terjadi dengan nilai ini.
-Relative: Elemen dengan position: relative; diposisikan relatif terhadap posisi aslinya. Misalnya, top: 20px; akan memindahkan elemen 20 piksel ke bawah dari posisi aslinya.
+- **Content**: Area di mana teks dan gambar ditampilkan.
+- **Padding**: Ruang antara konten dan batas (border) elemen.
+- **Border**: Garis yang mengelilingi padding dan konten.
+- **Margin**: Ruang di luar border yang memisahkan elemen dari elemen lain.
 
-b. Absolute: Dengan position: absolute;, elemen diposisikan relatif terhadap elemen induknya yang memiliki posisi non-static (biasanya relative, absolute, atau fixed). Elemen ini dihapus dari aliran normal dokumen, sehingga elemen-elemen lain tidak akan terpengaruh oleh posisinya.
+Box model mempengaruhi ukuran total elemen, sehingga pemahaman tentang ini penting untuk pengaturan layout yang tepat.
 
-c. Fixed: Elemen dengan position: fixed; akan tetap di tempat yang sama bahkan saat halaman digulir. Biasanya digunakan untuk header atau elemen navigasi yang selalu terlihat saat pengguna menggulir halaman.
+---
+
+## 3. Positioning/Layout
+
+Positioning dalam CSS digunakan untuk menentukan posisi elemen di dalam halaman. Ada beberapa jenis positioning:
+
+- **Static**: Nilai default, elemen ditempatkan di dalam alur dokumen normal.
+- **Relative**: Elemen diposisikan relatif terhadap posisi asalnya, memungkinkan penggeseran menggunakan properti `top`, `right`, `bottom`, dan `left`.
+- **Absolute**: Elemen diposisikan relatif terhadap elemen terdekat yang memiliki posisi selain static. Ini mengeluarkan elemen dari alur dokumen normal.
+- **Fixed**: Elemen diposisikan relatif terhadap jendela tampilan (viewport), tetap di tempat saat halaman digulir.
+- **Sticky**: Elemen berperilaku sebagai relative sampai mencapai batas tertentu, kemudian berperilaku seperti fixed.
