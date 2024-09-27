@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.atas a{
+  color: #306DF5 !important;
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  transition: background-color 0.5s ease; 
+}
+
+.atas a:hover{
+    background-color: #0D6EFD;
+    color: white !important;
+}
+
+.nvb{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Selain Navbar */
+
+img{
+    width: 71.53px;
+    height: 57px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 58px;
+    
+}
+
+.huruf{
+    line-height: 38.4px;
+    font-size: 31px;
+    font-weight: 500 !important;
+    margin-top: 23px;
+}
+
+.pnya{
+    text-align: center;
+    font-weight: 300 !important;
+    color: #212529 !important;
+    line-height: 30px;
+    margin-top: 8.9px;
+}
+
+.detail{
+    font-size: 23px;
+    color: #212529 !important;
+    font-weight: 500;
+    line-height: 28.8px !important;
+    margin-bottom: 16.42px;
+    margin-top: 28px;
+}
+
+.form-label-name{
+    margin-bottom: 9.5px;
+    margin-top: 16.42px;
+    font-size: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: 400;
+    color: #212529 !important;
+}
+.form-control{
+    width: 282px;
+    margin-bottom: 34px;
+}
+.form-select{
+    width: 242px;
+    margin-top: 11.69px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #212529 !important;
+    margin-bottom: 29.81px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.file .form-control {
+    color: #0D6EFD;
+    font-size: 13px; 
+    position: relative;
+    font-size: 13px; 
+    padding: 10px; 
+    cursor: pointer;
+    border-radius: 4px; 
+    border-color: #0D6EFD;
+    
+}
+
+
+.chose{
+    font-size: 13px;
+    border: 1px solid;
+    padding-top: 7px;
+    height: 32px;
+    width: 89px;
+    padding-left: 12px;
+    margin-left: -24px;
+    cursor: pointer;
+    background-color: #0D6EFD;
+    color: #FFFFFF;
+    border-radius: px;
+}
+
+.container {
+    display: flex;
+    align-items: center; 
+    cursor: pointer;
+}
+
+
+.n-file {
+    margin-left: -1px;
+    border: 1px solid;
+    font-size: 13px;
+    padding-top: 8.5px;
+    padding-bottom: 22px;
+    border-color: #0D6EFD;
+    border-radius: 4px;
+    height: 32px;
+    margin-left: -89px;
+    width: 197px;
+    color: #0D6EFD;
+    padding-left: 95px;
+}
+
+.product-freshness {
+    font-size: 16px;
+    font-weight: 400;
+    color: #212529;
+    margin-top: 35.81px;
+    margin-bottom: 5.5px;
+}
+
+.custom-label{
+    margin-bottom: 10.69px;
+}
+
+.addtional{
+    margin-bottom: 10.69px;
+}
+.form-control-area {
+    width: 603px; 
+    height: 116px; 
+    border-radius: 4px;
+    border-color: #CED4DA;
+    margin-bottom: 33px;
+}
+
+
+.form-control-btn{
+    width: 604px;
+    height: 36px;
+    border-radius: 4px;
+    border-color: #CED4DA;
+    border: 1px solid #CED4DA;
+}
+
+.submit-button{
+    width: 557px;
+    border: none;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    background-color: #0D6EFD;
+    border-radius: 4.8px;
+    color: #FFFFFF;  
+}
+
+.sbmt{
+    display: flex;
+    justify-content: center;
+    margin-top: 138.19px;
+    margin-bottom: 20px;
+    border-radius: 40.8px;
+    width: 603px;
+} 
+
+
