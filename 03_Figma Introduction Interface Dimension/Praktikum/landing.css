@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+.bagian a{
+  color: #306DF5 !important;
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  transition: background-color 0.5s ease; 
+}
+.bagian a:hover{
+    background-color: #0D6EFD;
+    color: white !important;
+}
+
+#header > h1 {
+    font-size: 60px; 
+    color: #37517E; 
+}
+
+.menu {
+    list-style: none; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.menu li {
+    margin: 0 15px; 
+    padding: 10px; 
+    font-size: 18px; 
+    color: #0D6EFD;
+}
+
+.menu li:hover {
+    color: #0D6EFD; 
+    cursor: pointer;
+}
+
+.gambar1 {
+    padding: auto;
+}
+
+.konten {
+    background-size: cover;
+    background-repeat: no-repeat; 
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    height: 100vh;
+    background-color: #37517E;
+}
+
+.konten h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 56px;
+    font-weight: 700;
+    margin-top: 267.06px;
+    font-family: 'Jost', sans-serif;
+
+}
+
+.konten p {
+    font-size: 24px;
+    padding-top: 8px;
+    color: #a1aec3;
+    opacity: 90%;
+    font-family: 'Jost', sans-serif;
+    margin-bottom: 20px;
+}
+
+#button-container {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    justify-content: flex-start;
+    margin-bottom: 201.34px;
+    padding-top: 90px;
+}
+
+
+#btn-start {
+    background-color: #47B2E4;
+    color: white;
+    padding: 9px 28.36px 12px 28px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: background-color 0.8s ease;
+}
+
+#btn-start:hover {
+    background-color: #45a049; 
+    transform: scale(1.1);
+}
+
+#watch-text {
+    color: white;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.logo {
+    position: absolute;
+    top: 20%;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 10px;
+    margin-bottom: 72px;
+    
+}
+.hero{
+    width: 636px;
+    height: 527px;
+    
+}
+
+.logo img {
+    padding: 20px;
+}
+
+.tengah{
+    height: 270px;
+    background-color: #F3F5FA;
+}
+.join{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.join h3{
+    font-size: 24px;
+    color: #37517E;
+    font-weight: 700;
+    padding-bottom: 16px;
+}
+.join p{
+    font-size: 15px;
+    padding-bottom: 31.5px;
+}
+.input-field{
+    width: 636px;
+    border: none;
+    height: 42.5px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); 
+}
+.btn-s{
+    border: none;
+    border-radius: 50px;
+    height: 45px;
+    width: 113px;
+    background-color: #47B2E4;
+    color: #FFFFFF;
+    margin-left: -70px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.8s ease;
+}
+.btn-s:hover{
+    background-color: #45a049; 
+    transform: scale(1.1); 
+}
+
+.bawah{
+    height: 230px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-family: 'Jost', sans-serif;
+}
+
+.bawah-dalam{
+   width: 1,280px;
+   height: 249.19px;
+   margin: 60px 80px 10px 80px;
+   display: flex block;
+   justify-content: center;
+}
+.dalam{
+    width: 330px;
+    height: 219.19px;
+    justify-content: center;
+    margin: 5px; 
+    box-sizing: border-box; 
+}
+.dalam h3{
+    font-size: 28px;
+    padding-right: 90px;
+    color: #37517E;
+    font-weight: 600;
+}
+.dalam p{
+    color: #5E5E5E;
+    font-size: 14px;
+}
+.tulisan p{
+    margin-bottom: 5px;
+}
+.dalam h6{
+    font-size: 16px;
+    color: #37517E;
+    font-weight: 700; margin-bottom: 19px;
+}
+.dalam ul{
+    list-style: none;
+    padding-left: 32px;
+}
+.dalam ul li a{
+    text-decoration: none;
+    color: #777777;
+    font-size: 14px;
+}
+.dalam li{
+    margin-bottom: 14px
+}
+.hour{
+    margin-bottom: 19px;
+    font-family: 'Jost', sans-serif;
+    color: #37517E;
+    font-weight: 700;
+
+}
+.dalam2{
+    color: #777777;
+    font-size: 14px;
+}
+img{
+    width: 278px;
+    height: 55px;
+}
+.footer {
+    height: 81px;
+    background-color: #37517E;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 120px;
+    padding-right: 120px;
+    align-items: center;
+    box-sizing: border-box;
+}
+.selection{
+    color: #47B2E4;
+}
+
+
+
