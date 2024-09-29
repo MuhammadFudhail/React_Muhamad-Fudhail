@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kutipan Acak dengan Async-Await</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        #quote {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            width: 300px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="quote">Klik tombol untuk mendapatkan kutipan.</div>
+    <button onclick="getQuote()">Berikan Kata Random</button>
+
+    <script>
+        const quotes = [
+            'Batasan satu-satunya untuk esok adalah keraguan kita hari ini.',
+            'Tujuan hidup kita adalah untuk bahagia.',
+            'Hidup adalah apa yang terjadi saat kita sibuk membuat rencana lain.',
+            'Jangan biarkan apa yang tidak dapat kamu lakukan mengganggu apa yang dapat kamu lakukan.',
+            'Kebahagiaan bukanlah sesuatu yang siap dibuat. Itu berasal dari tindakan Anda sendiri.'
+        ];
+
+        // Fungsi untuk mensimulasikan pemanggilan API menggunakan setTimeout
+        function fetchQuotes() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(quotes);  // Mengembalikan array kutipan setelah 2 detik
+                }, 2000);
+            });
+        }
+
+        async function getQuote() {
+            // Tampilkan pesan bahwa data sedang diambil
+            document.getElementById('quote').innerText = 'Mengambil kutipan...';
+
+            // Mengambil data kutipan dari API tiruan
+            const fetchedQuotes = await fetchQuotes();
+
+            // Memilih kutipan acak dari data yang diambil
+            const randomIndex = Math.floor(Math.random() * fetchedQuotes.length);
+            const randomQuote = fetchedQuotes[randomIndex];
+
+            // Menampilkan kutipan acak di dalam div
+            document.getElementById('quote').innerText = randomQuote;
+        }
+    </script>
+
+</body>
+</html>
