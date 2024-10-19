@@ -35,6 +35,7 @@ const CreateProduct = () => {
         productDescription: true,
         productPrice: true,
     });
+    const [editIndex, setEditIndex] = useState(null); // State untuk menyimpan indeks yang akan diedit
 
     const addData = () => {
         const isProductNameValid = productName.length <= 25;
@@ -49,12 +50,12 @@ const CreateProduct = () => {
         });
 
         if (!isProductNameValid) {
-            alert('Last Name must not exceed 25 characters.');
+            alert('Product Name must not exceed 25 characters.');
             return; 
         }
 
         if (!isAllFieldsFilled) {
-            alert('Please enter a valid product name.');
+            alert('Please fill all fields.');
             return;
         }
 
@@ -67,7 +68,16 @@ const CreateProduct = () => {
             productPrice,
         };
 
-        setDataList([...dataList, newData]);
+        if (editIndex !== null) {
+            const updatedList = dataList.map((data, index) => 
+                index === editIndex ? newData : data
+            );
+            setDataList(updatedList);
+            setEditIndex(null); // Reset edit index
+        } else {
+            setDataList([...dataList, newData]);
+        }
+
         resetFields();
     };
 
@@ -110,6 +120,17 @@ const CreateProduct = () => {
         setLanguage(language === 'en' ? 'id' : 'en'); // Toggle antara 'en' dan 'id'
     };
 
+    const editData = (index) => {
+        const dataToEdit = dataList[index];
+        setProductName(dataToEdit.productName);
+        setProductCategory(dataToEdit.productCategory);
+        setProductImage(dataToEdit.productImage);
+        setProductFreshness(dataToEdit.productFreshness);
+        setProductDescription(dataToEdit.productDescription);
+        setProductPrice(dataToEdit.productPrice);
+        setEditIndex(index); // Set edit index
+    };
+
     const titleText = language === 'en' ? 'Product List Table' : 'Tabel List Produk';
     const buttonLabel = language === 'en' ? 'Switch to Indonesian' : 'Ubah ke Inggris';
 
@@ -127,11 +148,11 @@ const CreateProduct = () => {
             </div>
 
             <div className="button-x">
-                <button onClick={addData}>Add data</button>
+                <button onClick={addData}>{editIndex !== null ? 'Update Data' : 'Add Data'}</button>
                 <button onClick={deleteLast}>Delete Last</button>
                 <button onClick={searchData}>Search</button>
                 <button onClick={handleRandomNumber}>Tampilkan Angka Acak</button>
-                <button onClick={toggleLanguage}>{buttonLabel}</button> {/* Button untuk mengganti bahasa */}
+                <button onClick={toggleLanguage}>{buttonLabel}</button> {/* Button untuk mengganti bahasa */} 
             </div>
 
             <table>
@@ -144,6 +165,7 @@ const CreateProduct = () => {
                         <th>{language === 'en' ? 'Product Freshness' : 'Kesehatan Produk'}</th>
                         <th>{language === 'en' ? 'Additional Description' : 'Deskripsi Tambahan'}</th>
                         <th>{language === 'en' ? 'Price' : 'Harga'}</th>
+                        <th>{language === 'en' ? 'Actions' : 'Aksi'}</th> {/* Kolom untuk Aksi */}
                     </tr>
                 </thead>
                 <tbody>
@@ -156,14 +178,10 @@ const CreateProduct = () => {
                             <td>{data.productFreshness}</td>
                             <td>{data.productDescription}</td>
                             <td>{data.productPrice}</td>
+                            <td>
+                                <button className='edit-button' onClick={() => editData(index)}>Edit</button> {/* Tombol Edit */}
+                                
+                            </td>
                         </tr>
                     ))}
-                </tbody>
-            </table>
-
-            <Footer /> {/* Memanggil Komponen Footer */}
-        </div>
-    );
-};
-
-export default CreateProduct;
+               
