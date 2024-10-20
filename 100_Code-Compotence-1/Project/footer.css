@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.gambar{
+    margin-top: 20px;
+    display: flex; 
+    gap: 20px; 
+    display: flex;
+    justify-content: center;
+    
+}
+
+.gambar a {
+    outline: none; 
+    border: none; 
+}
+
+.gambar img {
+    width: 40px; 
+    height: auto; 
+    transition: transform 0.3s, filter 0.3s; 
+}
+
+.gambar a:hover {
+    text-decoration: none; 
+}
+
+.gambar img:hover {
+    transform: scale(1.3); 
+    filter: brightness(0.8); 
+}
+
+.newsletter-container {
+    padding: 20px;
+    margin-top: 100px;
+    width: 800px;
+    height: 28vh;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5F5;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.newsletter-container h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+    color: #181C14;
+}
+
+.newsletter-container p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #181C14;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 5px;  
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    flex-grow: 1; 
+    border-color: black;
+    border: 1px solid;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: black; 
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: #F3C623; 
+}
+
+.lis-servis {
+    text-align: center; 
+    margin-top: 60px;
+    max-width: 800px;  
+}
+
+.lis-servis ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center; 
+    gap: 40px; 
+}
+
+.lis-servis li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+.lis-servis a {
+    text-decoration: none; 
+    color: white; 
+}
+

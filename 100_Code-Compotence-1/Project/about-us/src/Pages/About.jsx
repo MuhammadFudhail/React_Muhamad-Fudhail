@@ -1,5 +1,5 @@
 import React from 'react';
-import assets from '../assets/background3'; // Ganti dengan path gambar yang sesuai
+import assets from '../assets/background3.jpg'; // Ganti dengan path gambar yang sesuai
 
 const TentangKami = () => {
   return (
