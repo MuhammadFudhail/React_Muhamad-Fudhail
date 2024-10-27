@@ -9,3 +9,5 @@
 
 4. **Analisis dan Monitoring**: Gunakan dasbor Vercel untuk memantau status penyebaran dan menganalisis kinerja aplikasi Anda dengan metrik bawaan.
 
+LINK HASIL DEPLOY
+https://react-muhamad-fudhail.vercel.app/
