@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import CreateProduct from './CreateProduct';
 
+//Prioritas 1
 describe('CreateProduct Component', () => {
   test('should accept input text for Product Name', () => {
     render(<CreateProduct />);
@@ -36,4 +37,23 @@ describe('CreateProduct Component', () => {
     const row = screen.getByText(/Produk Uji/i);
     expect(row).toBeInTheDocument(); // Memastikan baris data muncul di tabel
   });
+});
+
+// Prioritas 2 - memastikan pilihan pada form tersimpan dan ditampilkan
+test('should save and display selected options correctly', () => {
+  render(<CreateProduct />);
+
+  // Ambil input dropdown atau radio button pilihan
+  const productConditionInput = screen.getByLabelText(/Product Condition/i); // Gantilah dengan label input yang sesuai
+  const addDataButton = screen.getByText(/Add Data/i);
+
+  // Pilih opsi yang diinginkan (contoh: kondisi 'New' atau 'Used')
+  fireEvent.change(productConditionInput, { target: { value: 'New' } });
+
+  // Tambahkan data ke tabel
+  fireEvent.click(addDataButton);
+
+  // Memastikan pilihan tersimpan dan ditampilkan
+  const savedCondition = screen.getByText(/New/i); // Memastikan pilihan yang tersimpan adalah 'New'
+  expect(savedCondition).toBeInTheDocument();
 });
