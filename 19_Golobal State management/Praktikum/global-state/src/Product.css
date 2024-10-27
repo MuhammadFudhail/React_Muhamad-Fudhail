@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Gunakan warna putih untuk latar belakang */
+    margin: 20px;
+    padding: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tulisan {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px; /* Ukuran font yang lebih besar untuk judul */
+    font-weight: bold; /* Menebalkan font */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #F5F5F7; /* Warna latar belakang untuk header tabel */
+    color: black;
+    font-weight: bold;
+}
+
+.tr:hover {
+    background-color: #f1f1f1; /* Efek hover pada baris tabel */
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px; /* Jarak antara elemen */
+}
+
+.custom-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+    height: 45px;
+    width: 100%;
+    font-size: 17px;
+    transition: border 0.3s; /* Efek transisi saat fokus */
+}
+
+.custom-input:focus {
+    border-color: black; /* Ganti warna border saat input fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+
+.button-x {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    margin-bottom: 100px;
+    padding-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Warna dasar tombol */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 15px;
+    width: 110px;
+    font-size: 15px;
+    height: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: gray; /* Warna saat hover */
+}
+
+.tabel-x th {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.error {
+    border: 2px solid #F95454; /* Border merah untuk error */
+}
+
+.gambar-bs {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    text-align: center; 
+}
+
+.article-image {
+    width: 60px; 
+    height: 50px; 
+}
+
+.tulisan-1 {
+    margin: 10px 0;  /* Jarak atas dan bawah 10px */
+}
+
+.paragraf {
+    padding-top: 10px; /* Padding atas untuk paragraf */
+    bottom: 20px;
+    background-color: #E6B329;
+    border-radius: 5px; /* Tambahkan border-radius untuk sudut yang lebih halus */
+    padding: 15px; /* Tambahkan padding */
+}
+
+.view {
+    background-color: #A04747;
+    text-align: center; 
+    height: 50px;
+    border-radius: 5px; /* Sudut membulat */
+    transition: background-color 0.3s; /* Transisi saat hover */
+}
+
+.view:hover {
+    background-color: #F95454; 
+}
+
+.back {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+.button-table{
+    justify-content: center;
+    display: flex;
+}
+
+/* Tombol dengan warna khusus */
+button.addb {
+    background-color: #1565C0; /* Warna latar belakang hijau untuk edit */
+}
+button.edit {
+    background-color: #4CAF50 ; /* Warna latar belakang hijau untuk edit */
+}
+button.delete {
+    background-color: #E53935; /* Warna latar belakang merah untuk delete */
+}
+  
+
+button.addb:hover {
+    background-color: #0D47A1; /* Warna saat hover pada tombol delete */
+}
+
+button.edit:hover {
+    background-color: #45a049; /* Warna saat hover pada tombol edit */
+}
+
+button.delete:hover {
+    background-color: #c62828; /* Warna saat hover pada tombol delete */
+}
