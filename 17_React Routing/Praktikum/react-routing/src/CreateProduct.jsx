@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ProductDetailsPage from "./Tampil";
 import './Product.css';
-import { useNavigate } from 'react-router-dom';
 
 // Komponen Header
 const Header = ({ title }) => {
@@ -21,7 +20,6 @@ const Footer = () => {
   );
 };
 
-
 // Komponen Utama
 const CreateProduct = () => {
   const [dataList, setDataList] = useState([]); 
@@ -39,11 +37,8 @@ const CreateProduct = () => {
     productDescription: true,
     productPrice: true,
   });
-  const [editIndex, setEditIndex] = useState(null); // Index untuk edit data
-  const [selectedProduct, setSelectedProduct] = useState(null); // Produk terpilih untuk dilihat detailnya
-  // const navigate = useNavigate()
-
-
+  const [editIndex, setEditIndex] = useState(null); 
+  const [selectedProduct, setSelectedProduct] = useState(null); 
 
   // Fungsi untuk menambahkan atau mengedit data
   const addData = () => {
@@ -82,12 +77,12 @@ const CreateProduct = () => {
         index === editIndex ? newData : data
       );
       setDataList(updatedList);
-      setEditIndex(null); // Reset edit index setelah menyimpan perubahan
+      setEditIndex(null); 
     } else {
-      setDataList([...dataList, newData]); // Menambah data baru
+      setDataList([...dataList, newData]); 
     }
 
-    resetFields(); // Reset input setelah menambahkan data
+    resetFields(); 
   };
 
   // Fungsi untuk me-reset semua input
@@ -129,13 +124,10 @@ const CreateProduct = () => {
     }
   };
 
-  const navigate = useNavigate();
-
-  const handleViewProduct = (product, index) => {
-    console.log(product)
-    navigate(`/detail-product/${index}`, { state: { product } });
+  // Fungsi untuk melihat detail produk tanpa navigasi
+  const handleViewProduct = (product) => {
+    setSelectedProduct(product);
   };
-
 
   // Fungsi untuk mengedit data produk
   const editData = (index) => {
@@ -151,7 +143,7 @@ const CreateProduct = () => {
 
   // Fungsi untuk mengganti bahasa
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'id' : 'en'); // Toggle antara 'en' dan 'id'
+    setLanguage(language === 'en' ? 'id' : 'en');
   };
 
   const titleText = language === 'en' ? 'Product List Table' : 'Tabel List Produk';
@@ -159,61 +151,58 @@ const CreateProduct = () => {
 
   return (
     <div>
-      <Header title={titleText} /> {/* Memanggil Komponen Header */}
-    <div className="container">
-      <div className="form-container">
-        <input type="text" className={`custom-input ${!validations.productName ? 'error' : ''}`} value={productName} onChange={(e) => setProductName(e.target.value)} placeholder={language === 'en' ? "Product Name" : "Nama Produk"} required />
-        <input type="text" className={`custom-input ${!validations.productCategory ? 'error' : ''}`} value={productCategory} onChange={(e) => setProductCategory(e.target.value)} placeholder={language === 'en' ? "Product Category" : "Kategori Produk"} required />
-        <input type="text" className={`custom-input ${!validations.productImage ? 'error' : ''}`} value={productImage} onChange={(e) => setProductImage(e.target.value)} placeholder={language === 'en' ? "Product Image Link" : "Link Gambar Produk"} required />
-        <input type="text" className="custom-input" value={productFreshness} onChange={(e) => setProductFreshness(e.target.value)} placeholder={language === 'en' ? "Product Freshness" : "Kesehatan Produk"} />
-        <input type="text" className={`custom-input ${!validations.productDescription ? 'error' : ''}`} value={productDescription} onChange={(e) => setProductDescription(e.target.value)} placeholder={language === 'en' ? "Additional Description" : "Deskripsi Tambahan"} required />
-        <input type="text" className={`custom-input ${!validations.productPrice ? 'error' : ''}`} value={productPrice} onChange={(e) => setProductPrice(e.target.value)} placeholder={language === 'en' ? "Product Price" : "Harga Produk"} required />
-      </div>
+      <Header title={titleText} /> 
+      <div className="container">
+        <div className="form-container">
+          <input type="text" className={`custom-input ${!validations.productName ? 'error' : ''}`} value={productName} onChange={(e) => setProductName(e.target.value)} placeholder={language === 'en' ? "Product Name" : "Nama Produk"} required />
+          <input type="text" className={`custom-input ${!validations.productCategory ? 'error' : ''}`} value={productCategory} onChange={(e) => setProductCategory(e.target.value)} placeholder={language === 'en' ? "Product Category" : "Kategori Produk"} required />
+          <input type="text" className={`custom-input ${!validations.productImage ? 'error' : ''}`} value={productImage} onChange={(e) => setProductImage(e.target.value)} placeholder={language === 'en' ? "Product Image Link" : "Link Gambar Produk"} required />
+          <input type="text" className="custom-input" value={productFreshness} onChange={(e) => setProductFreshness(e.target.value)} placeholder={language === 'en' ? "Product Freshness" : "Kesehatan Produk"} />
+          <input type="text" className={`custom-input ${!validations.productDescription ? 'error' : ''}`} value={productDescription} onChange={(e) => setProductDescription(e.target.value)} placeholder={language === 'en' ? "Additional Description" : "Deskripsi Tambahan"} required />
+          <input type="text" className={`custom-input ${!validations.productPrice ? 'error' : ''}`} value={productPrice} onChange={(e) => setProductPrice(e.target.value)} placeholder={language === 'en' ? "Product Price" : "Harga Produk"} required />
+        </div>
 
-      <div className="button-x">
-        <button onClick={addData}>Add data</button>
-        <button onClick={deleteLast}>Delete Last</button>
-        <button onClick={searchData}>Search</button>
-        <button onClick={toggleLanguage}>{buttonLabel}</button>
-      </div>
+        <div className="button-x">
+          <button onClick={addData}>Add data</button>
+          <button onClick={deleteLast}>Delete Last</button>
+          <button onClick={searchData}>Search</button>
+          <button onClick={toggleLanguage}>{buttonLabel}</button>
+        </div>
 
-      <table>
-        <thead>
-          <tr className="tabel-x">
-            <th>No</th>
-            <th>{language === 'en' ? 'Product Name' : 'Nama Produk'}</th>
-            <th>{language === 'en' ? 'Product Category' : 'Kategori Produk'}</th>
-            <th>{language === 'en' ? 'Product Image Link' : 'Link Gambar Produk'}</th>
-            <th>{language === 'en' ? 'Product Freshness' : 'Kesehatan Produk'}</th>
-            <th>{language === 'en' ? 'Additional Description' : 'Deskripsi Tambahan'}</th>
-            <th>{language === 'en' ? 'Product Price' : 'Harga Produk'}</th>
-            <th>{language === 'en' ? 'Action' : 'Aksi'}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {dataList.map((data, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{data.productName}</td>
-              <td>{data.productCategory}</td>
-              <td>{data.productImage}</td>
-              <td>{data.productFreshness}</td>
-              <td>{data.productDescription}</td>
-              <td>{data.productPrice}</td>
-              <td>
-                {/* <button className ="view" onClick={() => handleViewProduct(data)}>{language === 'en' ? 'View' : 'Lihat'}</button> */}
-                <button className ="view"onClick={() => editData(index)}>{language === 'en' ? 'Edit' : 'Edit'}</button>
-                <button className ="view" onClick={() => handleViewProduct(data, index)}>{language === 'en' ? 'View' : 'Lihat'}</button>
-              </td>
+        <table>
+          <thead>
+            <tr className="tabel-x">
+              <th>No</th>
+              <th>{language === 'en' ? 'Product Name' : 'Nama Produk'}</th>
+              <th>{language === 'en' ? 'Product Category' : 'Kategori Produk'}</th>
+              <th>{language === 'en' ? 'Product Image Link' : 'Link Gambar Produk'}</th>
+              <th>{language === 'en' ? 'Product Freshness' : 'Kesehatan Produk'}</th>
+              <th>{language === 'en' ? 'Additional Description' : 'Deskripsi Tambahan'}</th>
+              <th>{language === 'en' ? 'Product Price' : 'Harga Produk'}</th>
+              <th>{language === 'en' ? 'Action' : 'Aksi'}</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      {selectedProduct && <ProductDetailsPage product={selectedProduct} />}
-     
-
-      <Footer /> {/* Memanggil Komponen Footer */}
-    </div>
+          </thead>
+          <tbody>
+            {dataList.map((data, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{data.productName}</td>
+                <td>{data.productCategory}</td>
+                <td>{data.productImage}</td>
+                <td>{data.productFreshness}</td>
+                <td>{data.productDescription}</td>
+                <td>{data.productPrice}</td>
+                <td>
+                  <button className="view" onClick={() => editData(index)}>{language === 'en' ? 'Edit' : 'Edit'}</button>
+                  {/* <button className="view" onClick={() => handleViewProduct(data)}>{language === 'en' ? 'View' : 'Lihat'}</button> */}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {selectedProduct && <ProductDetailsPage product={selectedProduct} />}
+        <Footer /> 
+      </div>
     </div>
   );
 };
