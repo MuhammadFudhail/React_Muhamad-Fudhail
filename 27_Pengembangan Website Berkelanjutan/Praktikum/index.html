@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized Green Web Page</title>
+    <style>
+        /* Menggunakan warna netral untuk mengurangi konsumsi energi pada layar */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Warna abu-abu muda, lebih efisien */
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #4CAF50; /* Hijau, warna yang lebih ramah lingkungan */
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            background: #ffffff; /* Warna latar belakang netral */
+        }
+        .high-res-background {
+            width: 100%;
+            height: auto;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .link-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .link-list li {
+            margin-bottom: 10px;
+        }
+        /* Lazy loading untuk gambar */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Optimized Green Web Page</h1>
+    </header>
+
+    <!-- Mengganti video dengan gambar latar belakang statis yang lebih ramah energi -->
+    <div style="background-image: url('https://via.placeholder.com/1920x1080'); height: 400px; background-size: cover; background-position: center;">
+    </div>
+
+    <main>
+        <section class="content">
+            <h2>About Me</h2>
+            <!-- Mengoptimalkan gambar dengan ukuran lebih kecil dan format WebP -->
+            <img src="https://via.placeholder.com/800x600.webp" alt="Optimized Image" loading="lazy">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex.</p>
+        </section>
+        <section class="content">
+            <h2>My Interests</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex.</p>
+            <ul class="link-list">
+                <li><a href="#">Interest 1</a></li>
+                <li><a href="#">Interest 2</a></li>
+                <li><a href="#">Interest 3</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Optimized Green Web Page</p>
+    </footer>
+</body>
+</html>
